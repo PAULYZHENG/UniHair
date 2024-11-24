@@ -1,0 +1,109 @@
+### Input
+# input rgba image path (default to None, can be load in GUI too)
+input: 
+# input text prompt (default to None, can be input in GUI too)
+prompt:
+negative_prompt:
+# input mesh for stage 2 (auto-search from stage 1 output path if None)
+mesh:
+# estimated elevation angle for input image 
+elevation: 0
+# reference image resolution
+ref_size: 256
+# density thresh for mesh extraction
+density_thresh: 1
+
+### Output
+outdir: logs
+mesh_format: obj
+save_path: ???
+
+### Training
+# use mvdream instead of sd 2.1
+mvdream: False
+# use imagedream
+imagedream: False
+# use stable-zero123 instead of zero123-xl
+stable_zero123: False 
+# guidance loss weights (0 to disable)
+lambda_sd: 0
+lambda_zero123: 1
+# warmup rgb supervision for image-to-3d
+warmup_rgb_loss: True
+# training batch size per iter
+batch_size: 30 #30
+# training iterations for stage 1
+iters: 1000 #1000
+extra_iter: 0
+fix_extra: False
+# whether to linearly anneal timestep
+anneal_timestep: True
+# training iterations for stage 2
+iters_refine: 50
+# training camera radius
+radius: 1.05
+# training camera fovy
+fovy: 39.6 #49.1 # align with zero123 rendering setting (ref: https://github.com/cvlab-columbia/zero123/blob/main/objaverse-rendering/scripts/blender_script.py#L61
+# training camera min elevation
+min_ver: -60 #-36 #-72
+# training camera max elevation
+max_ver: 0
+# checkpoint to load for stage 1 (should be a ply file)
+load:
+# whether allow geom training in stage 2
+train_geo: False
+# prob to invert background color during training (1 = always black, 0 = always white)
+invert_bg_prob: 0
+# like imagedream, use extra 3 standard views each step
+use_extra_views: False
+# directly constrained by predicted img
+img_loss_extra_views: True
+#fix view
+fix_view: True
+#ver interval of fix views
+round_num_fix_view: 1
+#hor interval of fix views
+inter_fix_view: 10
+
+
+# zero123_path: ./zero123-xl-diffusers
+# zero123_path: ../zero123-hf/logs-10k/pipeline-10000
+zero123_path: ./priors/hairSynthesizer
+
+strength: 
+stage_source:
+stage_target:
+### GUI
+gui: False
+force_cuda_rast: True
+# GUI resolution
+H: 800
+W: 800
+
+### Gaussian splatting
+num_pts: 5000
+sh_degree: 0
+position_lr_init: 0.001
+position_lr_final: 0.00002
+position_lr_delay_mult: 0.02
+position_lr_max_steps: 500
+feature_lr: 0.01
+opacity_lr: 0.05
+scaling_lr: 0.005
+rotation_lr: 0.005
+percent_dense: 0.01
+density_start_iter: 100
+density_end_iter: 3000
+densification_interval: 100
+opacity_reset_interval: 700
+densify_grad_threshold: 0.01
+prune_interval: 10000
+
+
+### Textured Mesh
+geom_lr: 0.0001
+texture_lr: 0.2
+
+### compare different settings
+use_vgg: False
+use_ssim: False
