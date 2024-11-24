@@ -35,8 +35,6 @@ dependencies:
       - asyncer==0.0.7
       - attrs==24.2.0
       - blessed==1.20.0
-      - carvekit==4.1.2
-      - carvekit-colab==4.1.0
       - certifi==2024.7.4
       - charset-normalizer==3.3.2
       - click==8.1.7
@@ -48,7 +46,7 @@ dependencies:
       - dearpygui==1.11.1
       - decorator==5.1.1
       - deprecated==1.2.14
-      - diffusers==0.30.0
+      - diffusers==0.21.4
       - einops==0.8.0
       - exceptiongroup==1.2.2
       - executing==2.0.1
@@ -173,9 +171,6 @@ dependencies:
       - tifffile==2024.8.10
       - tokenizers==0.19.1
       - tomlkit==0.12.0
-      - torch==1.12.1+cu113
-      - torchaudio==0.12.1+cu113
-      - torchvision==0.13.1+cu113
       - tqdm==4.66.5
       - traitlets==5.14.3
       - transformers==4.44.0
@@ -196,7 +191,4 @@ dependencies:
       - xatlas==0.0.9
       - yarl==1.9.4
       - zipp==3.20.0
-      - git+https://github.com/ashawkey/kiuikit
-      - git+https://github.com/facebookresearch/segment-anything.git
-      - git+https://github.com/NVlabs/nvdiffrast/
-prefix: /home/zz/anaconda3/envs/unihair
+

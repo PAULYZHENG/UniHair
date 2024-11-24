@@ -15,15 +15,10 @@ from utils.criterion import PerceptualLoss, ssim
 class Main:
     def __init__(self, opt):
         self.opt = opt
-        self.W = opt.W
-        self.H = opt.H
-        self.cam = OrbitCamera(opt.W, opt.H, r=opt.radius, fovy=opt.fovy)
+        self.cam = OrbitCamera(512, 512, r=opt.radius, fovy=opt.fovy)
 
         self.mode = "image"
         self.seed = "random"
-
-        self.buffer_image = np.ones((self.W, self.H, 3), dtype=np.float32)
-        self.need_update = True  # update buffer_image
 
         # models
         self.device = torch.device("cuda")
@@ -142,8 +137,8 @@ class Main:
         if self.guidance_zero123 is None and self.enable_zero123:
             print(f"[INFO] loading HairEnhancer...")
             from guidance.zero123_utils import Zero123
-            # self.guidance_zero123 = Zero123(self.device, model_key=self.opt.zero123_path, img_size=self.opt.ref_size)
-            self.guidance_zero123 = Zero123(self.device, model_key='PaulZhengHit/HairEnhancer', img_size=self.opt.ref_size)
+            self.guidance_zero123 = Zero123(self.device, model_key=self.opt.zero123_path, img_size=self.opt.ref_size)
+            # self.guidance_zero123 = Zero123(self.device, model_key='PaulZhengHit/HairEnhancer', img_size=self.opt.ref_size)
             print(f"[INFO] loaded HairEnhancer!")
 
         # input image
@@ -275,8 +270,6 @@ class Main:
         torch.cuda.synchronize()
         t = starter.elapsed_time(ender)
 
-        self.need_update = True
-
         if self.step==self.opt.iters:
             self.update_targets(self.stage, need_diffusion=False, save=True)
 
@@ -367,7 +360,7 @@ class Main:
                 self.bg_remover = rembg.new_session()
             img = rembg.remove(img, session=self.bg_remover)
 
-        img = cv2.resize(img, (self.W, self.H), interpolation=cv2.INTER_AREA)
+        img = cv2.resize(img, (512, 512), interpolation=cv2.INTER_AREA)
         img = img.astype(np.float32) / 255.0
 
         self.input_mask = img[..., 3:]

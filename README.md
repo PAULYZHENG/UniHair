@@ -4,8 +4,6 @@ This repository contains the official implementation for [Towards Unified 3D Hai
 
 ### [Project Page](https://unihair24.github.io/) | [Arxiv](https://arxiv.org/abs/2409.16863)
 
-<p style="text-align: center;">
-            <iframe width="970" height="550" src="assets/fastforward.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 
 ### News
@@ -18,6 +16,10 @@ This repository contains the official implementation for [Towards Unified 3D Hai
 ```bash
 git clone --recursive https://github.com/PAULYZHENG/UniHair.git
 cd UniHair
+
+# change CUDA to 11.3 before create the env
+conda env create -f environment.yml
+conda activate unihair
 
 sh setup.sh
 ```

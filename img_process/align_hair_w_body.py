@@ -110,7 +110,7 @@ def adjust_learning_rate(optimizer, epoch, lr, schedule, gamma):
             param_group['lr'] = lr
     return lr
 
-def opt_cam(sample_info):
+def opt(sample_info):
     target_body_img_path = './data/alignment/front.png'
     target_lmk_path = './data/alignment/front_lmk.json'
 
@@ -169,6 +169,6 @@ if __name__ == '__main__':
     print('align hair with template body')
     for sample in tqdm(sample_info):
         try:
-            opt_cam(sample)
+            opt(sample)
         except:
             print('Error in processing ', sample[0])

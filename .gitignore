@@ -10,9 +10,13 @@ venv_*/
 model_cache
 
 data/logs/
-data/alignment/
+data/alignment/aligned_img/
+data/alignment/lmk_proj/
+data/alignment/lmk/
+data/alignment/resized_img/
+data/alignment/seg/
 data/inputs/
 priors/
-# xformers/
+ckpts/
 
 *.mp4

@@ -66,19 +66,12 @@ round_num_fix_view: 1
 inter_fix_view: 10
 
 
-# zero123_path: ./zero123-xl-diffusers
-# zero123_path: ../zero123-hf/logs-10k/pipeline-10000
-zero123_path: ./priors/hairSynthesizer
+zero123_path: PaulZhengHit/HairSynthesizer
+# zero123_path: ./priors/hairSynthesizer
 
 strength: 
 stage_source:
 stage_target:
-### GUI
-gui: False
-force_cuda_rast: True
-# GUI resolution
-H: 800
-W: 800
 
 ### Gaussian splatting
 num_pts: 5000
