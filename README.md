@@ -35,6 +35,7 @@ Put images you want to test in data/img/
 sh scripts/run_hairalign.sh
 sh scripts/run_unihair.sh
 ```
+Find your results in data/logs/
 
 ## Acknowledgement
 
