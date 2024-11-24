@@ -1,11 +1,9 @@
 [submodule "3DDFA_V2"]
 	path = 3DDFA_V2
-	url = https://github.com/PAULYZHENG/3DDFA_V2_np1.26
-
+	url = https://github.com/PAULYZHENG/3DDFA_V2_np1.26.git
 [submodule "diff-gaussian-rasterization"]
 	path = diff-gaussian-rasterization
-	url = https://github.com/ashawkey/diff-gaussian-rasterization
-	
+	url = https://github.com/ashawkey/diff-gaussian-rasterization.git
 [submodule "simple-knn"]
 	path = simple-knn
-	url = https://github.com/camenduru/simple-knn
+	url = https://github.com/camenduru/simple-knn.git
