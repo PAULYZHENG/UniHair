@@ -141,7 +141,8 @@ class Main:
         if self.guidance_zero123 is None and self.enable_zero123:
             print(f"[INFO] loading HairSynthesizer...")
             from guidance.zero123_utils import Zero123
-            self.guidance_zero123 = Zero123(self.device, model_key=self.opt.zero123_path)
+            # self.guidance_zero123 = Zero123(self.device, model_key=self.opt.zero123_path)
+            self.guidance_zero123 = Zero123(self.device, model_key='PaulZhengHit/HairSynthesizer')
             print(f"[INFO] loaded HairSynthesizer!")
 
         # input image

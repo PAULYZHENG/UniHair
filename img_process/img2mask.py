@@ -34,7 +34,7 @@ def write_mask_to_folder(mask, filename):
 
 def img2masks(data_root):
     print("segment hair mask")
-    sam = sam_model_registry['vit_h'](checkpoint='./priors/SAM-models/sam_vit_h_4b8939.pth')
+    sam = sam_model_registry['vit_h'](checkpoint='./ckpts/sam_vit_h_4b8939.pth')
     _ = sam.to(device='cuda')
 
     input_path = os.path.join(data_root, 'img')

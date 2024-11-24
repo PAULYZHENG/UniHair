@@ -19,15 +19,7 @@ This repository contains the official implementation for [Towards Unified 3D Hai
 git clone --recursive https://github.com/PAULYZHENG/UniHair.git
 cd UniHair
 
-conda env create -f environment.yml
-conda activate unihair
-
-pip install ./diff-gaussian-rasterization
-pip install ./simple-knn
-
-cd 3DDFA_V2
-sh ./build.sh
-cd ..
+sh setup.sh
 ```
 
 Tested on Ubuntu 22 with torch 1.12.1 & CUDA 11.3 on 3090/4090.
