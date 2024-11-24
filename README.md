@@ -5,6 +5,9 @@ This repository contains the official implementation for [Towards Unified 3D Hai
 ### [Project Page](https://unihair24.github.io/) | [Arxiv](https://arxiv.org/abs/2409.16863)
 
 
+[unihair](https://github.com/user-attachments/assets/838be752-b3e9-46d5-9bb9-91712ab7966e)
+
+
 
 ### News
 
