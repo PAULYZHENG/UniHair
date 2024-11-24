@@ -13,9 +13,6 @@ data/logs/
 data/alignment/
 data/inputs/
 priors/
-# 3DDFA_V2/
-# diff-gaussian-rasterization/
-# simple-knn/
 # xformers/
 
 *.mp4
