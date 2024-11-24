@@ -7,3 +7,7 @@
 [submodule "simple-knn"]
 	path = simple-knn
 	url = https://github.com/camenduru/simple-knn.git
+[submodule "xformers"]
+	path = xformers
+	url = https://github.com/facebookresearch/xformers.git
+	branch = main
