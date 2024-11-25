@@ -43,6 +43,7 @@ This repository is based on some excellent works, many thanks to all the authors
 
 - [DreamGaussian](https://github.com/dreamgaussian/dreamgaussian)
 - [gaussian-splatting](https://github.com/graphdeco-inria/gaussian-splatting) and [diff-gaussian-rasterization](https://github.com/graphdeco-inria/diff-gaussian-rasterization)
+- [zero123](https://github.com/cvlab-columbia/zero123) and [zero123-hf](https://github.com/kxhit/zero123-hf)
 - [3DFFA_V2](https://github.com/cleardusk/3DDFA_V2)
 - [SAM](https://github.com/facebookresearch/segment-anything)
 
