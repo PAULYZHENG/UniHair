@@ -51,10 +51,11 @@ This repository is based on some excellent works, many thanks to all the authors
 ## Citation
 
 ```
-@article{zheng2024towards,
+@inproceedings{zheng2024towards,
   title={Towards Unified 3D Hair Reconstruction from Single-View Portraits},
   author={Zheng, Yujian and Qiu, Yuda and Jin, Leyang and Ma, Chongyang and Huang, Haibin and Zhang, Di and Wan, Pengfei and Han, Xiaoguang},
-  journal={arXiv preprint arXiv:2409.16863},
+  booktitle={SIGGRAPH Asia 2024 Conference Papers},
+  pages={1--11},
   year={2024}
 }
 ```
