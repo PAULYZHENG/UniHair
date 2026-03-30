@@ -11,7 +11,7 @@ This repository contains the official implementation for [Towards Unified 3D Hai
 
 ### News
 
-- TODO: release the rendering data.
+- If you would like to use our data, please contact paul.yj.zheng@gmail.com
 - 2024.11.24: release the code!
 
 ## Install
@@ -20,7 +20,7 @@ This repository contains the official implementation for [Towards Unified 3D Hai
 git clone --recursive https://github.com/PAULYZHENG/UniHair.git
 cd UniHair
 
-# change CUDA to 11.3 before create the env
+# change CUDA to 11.3 before creating the env
 conda env create -f environment.yml
 conda activate unihair
 
@@ -39,7 +39,7 @@ Find your results in data/logs/
 
 ## Acknowledgement
 
-This repository is based on some excellent works, many thanks to all the authors!
+This repository is based on some excellent works; many thanks to all the authors!
 
 - [DreamGaussian](https://github.com/dreamgaussian/dreamgaussian)
 - [gaussian-splatting](https://github.com/graphdeco-inria/gaussian-splatting) and [diff-gaussian-rasterization](https://github.com/graphdeco-inria/diff-gaussian-rasterization)
